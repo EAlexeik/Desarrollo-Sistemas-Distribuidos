@@ -1,0 +1,6 @@
+#Ejecutables
+*.class
+*.exe
+
+#MAC
+.DS_Store

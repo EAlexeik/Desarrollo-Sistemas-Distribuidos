@@ -28,7 +28,7 @@ DELIMITER //
 CREATE PROCEDURE eliminar_producto
 (IN idPro INTEGER)
 BEGIN
-  DELETE FROM Producto WHERE idProducto=idProd;
+  DELETE FROM Producto WHERE idProducto=idPro;
 END //
 DELIMITER ;
 
@@ -42,7 +42,7 @@ DELIMITER ;
 
 DELIMITER //
 CREATE PROCEDURE mostrar_producto
-(IN id INT)
+(IN id INT, OUT id INT)
 BEGIN
   SELECT * FROM Producto WHERE idProducto=id;
 END //

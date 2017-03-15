@@ -7,6 +7,7 @@ package ejercicio4_minialmacen;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -15,6 +16,7 @@ import java.sql.SQLException;
  */
 public class ProductoDAO {
     private Connection conn;
+    private ResultSet rs;
     
     public void inicializar(Connection conn){
         this.conn=conn;
@@ -33,10 +35,22 @@ public class ProductoDAO {
         cs.setInt(1,p.getId());
         cs.executeUpdate();
     }
-    public void modificarProducto(){
-        
+    public void modificarProducto(Producto p) throws SQLException{
+        CallableStatement cs=conn.prepareCall("{call  modificar_producto(?,?,?,?)}");
+        cs.setInt(1,p.getId());
+        cs.setString(2,p.getNombre());
+        cs.setDouble(3,p.getPrecio());
+        cs.setInt(4,p.getExistencia());
+        cs.executeUpdate();
     }
-    public void mostrarProducto(){
+    public void mostrarProducto(int p) throws SQLException{
+        Producto pro;
+        String nombre;
+        Double precio;
+        int existencia;
+        CallableStatement cs=conn.prepareCall("{call  mostrar_producto(?)}");
+        cs.setInt(1,p);
+        rs=cs.executeQuery();
         
     }
 }

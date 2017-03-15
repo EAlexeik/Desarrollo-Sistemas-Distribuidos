@@ -28,7 +28,14 @@ public class Ejercicio4_MiniAlmacen {
             cmysql.RealizarConexion("tienda");
             ProductoDAO pdao=new ProductoDAO();
             pdao.inicializar(cmysql.getCon());
-            
+            Producto p=new Producto(4,"Si...",11.1,6);
+            pdao.eliminarProducto(p);
+            pdao.insertarProducto(p);
+            p.setNombre("Nel...");
+            p.setPrecio(16.8);
+            p.setExistencia(9);
+            pdao.modificarProducto(p);
+            pdao.mostrarProducto(4);
             cmysql.Desconectar();
             
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | SQLException ex) {

@@ -24,6 +24,7 @@ public class Servidor{
 		while(true){
 			Socket socketCliente=socketServidor.accept();
 			PrintWriter pw=new PrintWriter(socketCliente.getOutputStream());
+			pw.println(Servidor.metodoDos());
 			System.out.println(Servidor.metodoDos());
 			System.out.println(Servidor.metodoUno());
 			pw.close();
@@ -31,4 +32,3 @@ public class Servidor{
 		}
 	}
 }
-

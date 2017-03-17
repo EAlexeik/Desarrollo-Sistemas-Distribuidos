@@ -75,7 +75,20 @@ public class Crud {
             String query = "SELECT * FROM alumno WHERE idAlumno = '" + id + "'";
             rs = st.executeQuery(query);
             rs.next();
-            return new Alumno(rs.getInt("idAlumno"), rs.getString("contrasenia"), rs.getString("emailEscolar"), rs.getString("fechaIngreso"), rs.getInt("idGrupo"),rs.getInt("idAlumno"));
+            return new Alumno(rs.getInt("idAlumno"), rs.getString("contrasenia"), rs.getString("emailEscolar"), rs.getString("fechaIngreso"), rs.getInt("idGrupo"),rs.getInt("idPersona"));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    
+    //Buscar Usuario y Contraseña
+    public Alumno buscarAlumnoContrasenia(int id, String contrasenia){
+        try {
+            String query = "SELECT * FROM alumno WHERE idAlumno = '" + id + "' AND contrasenia = '"+contrasenia+"'";
+            rs = st.executeQuery(query);
+            rs.next();
+            return new Alumno(rs.getInt("idAlumno"), rs.getString("contrasenia"), rs.getString("emailEscolar"), rs.getString("fechaIngreso"), rs.getInt("idGrupo"),rs.getInt("idPersona"));
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -832,7 +845,7 @@ public class Crud {
     //Modificar Alumno
     public boolean updatePersona(Persona p) {
         try {
-            String query = "UPDATE Persona SET " + "curp='" + p.getCurp()+ "'," + "nombre='" + p.getNombre()+ "'," + "apellidoPat='" + p.getApellidoPat()+ "'," + "apellidoMat='" + p.getApellidoMat()+ "'," + "email='" + p.getEmail()+"'," + "fechaNacimiento='" + p.getFechaNacimiento()+ "' WHERE idAlumno = " + al.getIdAlumno() + ";";
+            String query = "UPDATE Persona SET " + "curp='" + p.getCurp()+ "'," + "nombre='" + p.getNombre()+ "'," + "apellidoPat='" + p.getApellidoPat()+ "'," + "apellidoMat='" + p.getApellidoMat()+ "'," + "email='" + p.getEmail()+"'," + "fechaNacimiento='" + p.getFechaNacimiento()+ "' WHERE idPersona = " + p.getIdPersona()+ ";";
             st.executeUpdate(query);
             return true;
         } catch (Exception e) {

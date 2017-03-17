@@ -6,10 +6,13 @@
             <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Practica1-DSD/src/servicios/Conexion.java</file>
             <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Practica1-DSD/src/server/Servidor.java</file>
             <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Practica1-DSD/src/modelos/Curso.java</file>
+            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Practica1-DSD/src/cliente/GUI_Alumno.java</file>
+            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Practica1-DSD/src/cliente/AlumnoRequest.java</file>
             <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Practica1-DSD/src/modelos/Alumno.java</file>
             <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Practica1-DSD/src/servicios/Crud.java</file>
             <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Practica1-DSD/src/modelos/Asignacion.java</file>
             <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Practica1-DSD/src/servicios/EmpacaBusqueda.java</file>
+            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Practica1-DSD/src/cliente/AsignacionRequest.java</file>
         </group>
     </open-files>
 </project-private>

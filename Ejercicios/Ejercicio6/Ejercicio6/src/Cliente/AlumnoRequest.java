@@ -19,6 +19,8 @@ import javax.swing.JOptionPane;
  * @author alexeik
  */
 public class AlumnoRequest implements Runnable{
+    GUILogin parent;
+    GUIAlumno alu;
     private Alumno alumno;
     private int id;
     private String contrasenia;
@@ -26,15 +28,21 @@ public class AlumnoRequest implements Runnable{
     private char request;
     private final String IP_ADDRESS = "127.0.0.1";
     private final int PORT = 8200;
-    
-    AlumnoRequest(Alumno alumno, char c) {
+
+    AlumnoRequest(GUILogin aThis, Alumno alumno, char c) {
         this.alumno=alumno;
         this.request=c;
+        this.parent=aThis;
     }
-   
+     AlumnoRequest(GUIAlumno aThis, Alumno alumno, char c) {
+        this.alumno=alumno;
+        this.request=c;
+        this.alu=aThis;
+    }
+     
     public Alumno sendAutentificar(){
         Alumno a = new Alumno();
-
+        boolean exitoso = false;
         try {
             Socket socket = new Socket(IP_ADDRESS, PORT);
             ObjectOutputStream peticion = new ObjectOutputStream(socket.getOutputStream());
@@ -45,8 +53,15 @@ public class AlumnoRequest implements Runnable{
             peticion.writeObject("autentificar");//Se manda operacion
             peticion.writeObject(this.alumno);//Se manda objeto
             a = (Alumno) respuesta.readObject();
-
-            JOptionPane.showMessageDialog(null, "Alumno encontrado", "Exito", JOptionPane.INFORMATION_MESSAGE);
+            exitoso = (boolean) respuesta.readObject();
+            if (exitoso) {
+                JOptionPane.showMessageDialog(null, "Alumno Encontrado", "Exito", JOptionPane.INFORMATION_MESSAGE);
+                synchronized (this.parent) {
+                    this.parent.cerrar(alumno);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Se produjo un error", "Error", JOptionPane.INFORMATION_MESSAGE);
+            }   
             peticion.close();
             respuesta.close();
             socket.close();

@@ -5,17 +5,26 @@
  */
 package Cliente;
 
+import Modelo.Alumno;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author alexeik
  */
 public class GUIAlumno extends javax.swing.JFrame {
-
+    Alumno alumno;
     /**
      * Creates new form GUIAlumno
      */
     public GUIAlumno() {
         initComponents();
+    }
+
+    GUIAlumno(Alumno alumno) {
+        initComponents();
+        this.alumno=alumno;
     }
 
     /**
@@ -141,7 +150,60 @@ public class GUIAlumno extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    public void getStudents() {
+        AlumnoRequest cliente;
+        cliente = new AlumnoRequest(this, alumno, 'l');
+        Thread peticion = new Thread(cliente);
+        peticion.start();
+    }
 
+    public void listStudents(ArrayList<Alumno> alumnos) {
+        Object[][] students = new Object[alumnos.size()][11];
+        String[] columns = {"idAlumno", "Nombre", "Apellido Paterno", "Apellido Materno", "Email", "Calle", "Numero", "Colonia", "Delegacion", "Entidad", "Telefono"};
+
+        for (int i = 0, j = 0; i < alumnos.size(); i++) {
+            students[i][j] = "" + alumnos.get(i).getIdAlumno();
+            students[i][j + 1] = "" + alumnos.get(i).getNombre();
+            students[i][j + 2] = "" + alumnos.get(i).getApellidoPaterno();
+            students[i][j + 3] = "" + alumnos.get(i).getApellidoMaterno();
+            students[i][j + 4] = "" + alumnos.get(i).getMail();
+            students[i][j + 5] = "" + alumnos.get(i).getCalle();
+            students[i][j + 6] = "" + alumnos.get(i).getNumero();
+            students[i][j + 7] = "" + alumnos.get(i).getColonia();
+            students[i][j + 8] = "" + alumnos.get(i).getDelegación();
+            students[i][j + 9] = "" + alumnos.get(i).getEntidad();
+            students[i][j + 10] = "" + alumnos.get(i).getTelefono();
+
+        }
+        tblShowTable.setModel(new DefaultTableModel(students, columns));
+    }
+
+    public void setValuesSearched(Alumno alumno) {
+        txtNombreAlumno.setText("" + alumno.getNombre());
+        txtApellidoP.setText(alumno.getApellidoPaterno());
+        txtApellidoM.setText(alumno.getApellidoMaterno());
+        txtEmail.setText(alumno.getMail());
+        txtCalle.setText(alumno.getCalle());
+        txtNumero.setText(alumno.getNumero());
+        txtColonia.setText(alumno.getColonia());
+        txtDelegacion.setText(alumno.getDelegación());
+        txtEntidad.setText(alumno.getEntidad());
+        txtTelefono.setText(alumno.getTelefono());
+
+    }
+
+    public Alumno buscarAlumno() {
+        AlumnoRequest cliente;
+        Alumno alumno = new Alumno();
+       // int idAlumno = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el nombre del Alumno ", "Buscar alumno", JOptionPane.QUESTION_MESSAGE));
+        int i = tblShowTable.getSelectedRow();
+        int idAlumno = Integer.parseInt(tblShowTable.getValueAt(i, 0)+"");
+        alumno.setIdAlumno(idAlumno);
+        cliente = new AlumnoRequest(this, alumno, 'b');
+        Thread peticion = new Thread(cliente);
+        peticion.start();
+        return alumno;
+    }
     /**
      * @param args the command line arguments
      */

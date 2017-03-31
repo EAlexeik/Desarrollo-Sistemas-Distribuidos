@@ -126,20 +126,27 @@ public class GUILogin extends javax.swing.JFrame {
         if(jRadioButton1.isSelected()){
             alumno.setIdAlumno(Integer.parseInt(jTextField1.getText()));
             alumno.setContrasenia(jPasswordField1.getText());
-            al=new AlumnoRequest(alumno,'c');
+            al=new AlumnoRequest(this,alumno,'c');
             Thread peticion = new Thread(al);
             peticion.start();
             System.out.println(alumno.toString());
         }else if(jRadioButton2.isSelected()){
             maestro.setIdMaestro(Integer.parseInt(jTextField1.getText()));
             maestro.setContrasenia(jPasswordField1.getText());
-            ma=new MaestroRequest(maestro,'c');
+            ma=new MaestroRequest(this,maestro,'c');
              Thread peticion = new Thread(ma);
             peticion.start();
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
-
+    public void cerrar(Alumno alumno){
+        GUIAlumno galumno=new GUIAlumno(alumno);
+        this.setVisible(false);
+    }
+    public void cerrar(Maestro maestro){
+        GUIMaestro gmaestro=new GUIMaestro(maestro);
+        this.setVisible(false);
+    }
     /**
      * @param args the command line arguments
      */

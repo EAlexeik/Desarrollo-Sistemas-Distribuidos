@@ -29,7 +29,7 @@ import java.util.ArrayList;
  *
  * @author alexeik
  */
-public class Servidor {
+public class Servidor{
 
     private final static int PORT = 8200;
 
@@ -77,6 +77,7 @@ public class Servidor {
 
                 switch (tabla) {
                     case "alumno":
+                        System.out.println("Entro al alumno");
                         accion = (String) peticion.readObject();
                         switch (accion) {
                             
@@ -116,6 +117,12 @@ public class Servidor {
                             case "listar":
                                 busquedaAlumno = em.ListaTodosAlumno();
                                 respuesta.writeObject(busquedaAlumno);
+                                break;
+                            case "autentificar":
+                                al= (Alumno)peticion.readObject();
+                                al=cru.buscarAlumnoContrasenia(al.getIdAlumno(), al.getContrasenia());
+                                System.out.println(al.toString());
+                                respuesta.writeObject(al);
                                 break;
                         }   break;
                     case "asignatura":
@@ -560,6 +567,7 @@ public class Servidor {
             }
 
         } catch (IOException | ClassNotFoundException e) {
+            System.out.println(e);
             System.out.println("Conexion finalizada");
 
             respuesta.close();

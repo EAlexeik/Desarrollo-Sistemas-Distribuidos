@@ -5,11 +5,13 @@
  */
 package Modelo;
 
+import java.io.Serializable;
+
 /**
  *
  * @author alexeik
  */
-public class Maestro {
+public class Maestro implements Serializable{
     private int idMaestro;
     private String contrasenia;
     private String grado;
@@ -22,6 +24,9 @@ public class Maestro {
         this.grado = grado;
         this.fechaIngreso = fechaIngreso;
         this.idPersona = idPersona;
+    }
+
+    public Maestro() {
     }
 
     public int getIdMaestro() {

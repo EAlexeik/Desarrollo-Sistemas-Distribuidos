@@ -4,11 +4,14 @@
  * and open the template in the editor.
  */
 package Modelo;
+
+import java.io.Serializable;
+
 /**
  *
  * @author alexeik
  */
-public class Alumno {
+public class Alumno implements Serializable{
     private int idAlumno;
     private String contrasenia;
     private String emailEscolar;
@@ -23,6 +26,9 @@ public class Alumno {
         this.fechaIngreso = fechaIngreso;
         this.idGrupo = idGrupo;
         this.idPersona = idPersona;
+    }
+
+    public Alumno() {
     }
 
     public int getIdAlumno() {
@@ -71,6 +77,11 @@ public class Alumno {
 
     public void setIdPersona(int idPersona) {
         this.idPersona = idPersona;
+    }
+
+    @Override
+    public String toString() {
+        return "Alumno{" + "idAlumno=" + idAlumno + ", contrasenia=" + contrasenia + ", emailEscolar=" + emailEscolar + ", fechaIngreso=" + fechaIngreso + ", idGrupo=" + idGrupo + ", idPersona=" + idPersona + '}';
     }
 
     

@@ -3,28 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Cliente/GUIMaestro.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Servicios/EmpacaBusqueda.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Servicios/Crud.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Modelo/Grupo.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Cliente/AlumnoRequest.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Modelo/Respuesta.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Servicios/Conexion.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Modelo/Maestro.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Modelo/Persona.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Cliente/MaestroRequest.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Modelo/Examen.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Modelo/Asignatura.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Modelo/Alumno.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Modelo/Carrera.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Modelo/Parcial.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Cliente/GUIListaAlumnos.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Servidor/Servidor.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Modelo/Pregunta.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Cliente/GUILogin.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Cliente/GUIPresentarExamen.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Modelo/Escuela.java</file>
-            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Practicas/Ejercicio6/src/Cliente/GUIAlumno.java</file>
+            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Ejercicios/Ejercicio6/Ejercicio6/src/Modelo/Persona.java</file>
+            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Ejercicios/Ejercicio6/Ejercicio6/src/Modelo/Maestro.java</file>
+            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Ejercicios/Ejercicio6/Ejercicio6/src/Modelo/Carrera.java</file>
+            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Ejercicios/Ejercicio6/Ejercicio6/src/Servidor/Servidor.java</file>
+            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Ejercicios/Ejercicio6/Ejercicio6/src/Cliente/GUILogin.java</file>
+            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Ejercicios/Ejercicio6/Ejercicio6/src/Cliente/AlumnoRequest.java</file>
+            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Ejercicios/Ejercicio6/Ejercicio6/src/Modelo/Escuela.java</file>
+            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Ejercicios/Ejercicio6/Ejercicio6/src/Modelo/Grupo.java</file>
+            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Ejercicios/Ejercicio6/Ejercicio6/src/Modelo/Asignatura.java</file>
+            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Ejercicios/Ejercicio6/Ejercicio6/src/Modelo/Examen.java</file>
+            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Ejercicios/Ejercicio6/Ejercicio6/src/Modelo/Pregunta.java</file>
+            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Ejercicios/Ejercicio6/Ejercicio6/src/Modelo/Parcial.java</file>
+            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Ejercicios/Ejercicio6/Ejercicio6/src/Cliente/MaestroRequest.java</file>
+            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Ejercicios/Ejercicio6/Ejercicio6/src/Modelo/Alumno.java</file>
+            <file>file:/Users/alexeik/Documents/RepositoriosGit/Desarrollo-Sistemas-Distribuidos/Ejercicios/Ejercicio6/Ejercicio6/src/Modelo/Respuesta.java</file>
         </group>
     </open-files>
 </project-private>

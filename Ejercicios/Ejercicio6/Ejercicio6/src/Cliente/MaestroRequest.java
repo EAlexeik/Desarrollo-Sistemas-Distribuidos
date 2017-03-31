@@ -5,10 +5,21 @@
  */
 package Cliente;
 
+import Modelo.Maestro;
+
 /**
  *
  * @author alexeik
  */
-public class MaestroRequest {
+public class MaestroRequest implements Runnable{
+
+    MaestroRequest(Maestro maestro, char c) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void run() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

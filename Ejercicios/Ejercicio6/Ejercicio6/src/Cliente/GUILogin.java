@@ -5,6 +5,9 @@
  */
 package Cliente;
 
+import Modelo.Alumno;
+import Modelo.Maestro;
+
 /**
  *
  * @author alexeik
@@ -41,7 +44,7 @@ public class GUILogin extends javax.swing.JFrame {
 
         jLabel1.setText("Login");
 
-        jLabel2.setText("Id Alumno:");
+        jLabel2.setText("Id:");
 
         jLabel3.setText("Contraseña:");
 
@@ -70,15 +73,14 @@ public class GUILogin extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel3)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jPasswordField1))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addComponent(jLabel2)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jLabel2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextField1)
+                                    .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -88,7 +90,7 @@ public class GUILogin extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(156, 156, 156)
                         .addComponent(jButton1)))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,7 +119,25 @@ public class GUILogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        AlumnoRequest al;
+        Alumno alumno=new Alumno();
+        MaestroRequest ma;
+        Maestro maestro= new Maestro();
+        if(jRadioButton1.isSelected()){
+            alumno.setIdAlumno(Integer.parseInt(jTextField1.getText()));
+            alumno.setContrasenia(jPasswordField1.getText());
+            al=new AlumnoRequest(alumno,'c');
+            Thread peticion = new Thread(al);
+            peticion.start();
+            System.out.println(alumno.toString());
+        }else if(jRadioButton2.isSelected()){
+            maestro.setIdMaestro(Integer.parseInt(jTextField1.getText()));
+            maestro.setContrasenia(jPasswordField1.getText());
+            ma=new MaestroRequest(maestro,'c');
+             Thread peticion = new Thread(ma);
+            peticion.start();
+        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

@@ -5,11 +5,13 @@
  */
 package Modelo;
 
+import java.io.Serializable;
+
 /**
  *
  * @author alexeik
  */
-public class Examen {
+public class Examen implements Serializable{
     private int idExamen;
     private String current_date;
     private double calificacion;

@@ -5,11 +5,13 @@
  */
 package Modelo;
 
+import java.io.Serializable;
+
 /**
  *
  * @author alexeik
  */
-public class Grupo {
+public class Grupo implements Serializable{
     private int idGrupo;
     private String salon;
     private int idCarrera;

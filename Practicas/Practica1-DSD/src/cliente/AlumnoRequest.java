@@ -25,13 +25,11 @@ public class AlumnoRequest implements Runnable {
         this.operation = operation;
         this.request = request;
     }
-
     public AlumnoRequest(GUI_Alumno parent, Alumno alumno, char request) {
         this.parent = parent;
         this.alumno = alumno;
         this.request = request;
     }
-
     public boolean sendUpdate() throws UnknownHostException, IOException {
         boolean exitoso = false;
         try {
